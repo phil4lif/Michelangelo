@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "448590bg",
     "database": "michelangelo_DB",
     "host": "localhost",
     "port": 3306,
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": "448590bg",
     "database": "michelangelo_DB",
     "host": "localhost",
     "port": 3306,
