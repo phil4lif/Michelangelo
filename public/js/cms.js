@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting jQuery references to the post body, title, form, and author select
   var bodyInput = $("#body");
   var titleInput = $("#title");
@@ -7,7 +7,7 @@ $(document).ready(function() {
   var categorySelect = $("#category");
 
   // Adding an event listener for when the form is submitted
-  $(cmsForm).on("submit", handleFormSubmit);
+  $(cms).on("submit", handleFormSubmit);
   // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
   var url = window.location.search;
   var postId;
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
   // Submits a new post and brings user to blog page upon completion
   function submitPost(post) {
-    $.post("/api/posts", post, function() {
+    $.post("/api/posts", post, function () {
       window.location.href = "/blog";
     });
   }
@@ -70,16 +70,16 @@ $(document).ready(function() {
   function getPostData(id, type) {
     var queryUrl;
     switch (type) {
-    case "post":
-      queryUrl = "/api/posts/" + id;
-      break;
-    case "author":
-      queryUrl = "/api/authors/" + id;
-      break;
-    default:
-      return;
+      case "post":
+        queryUrl = "/api/posts/" + id;
+        break;
+      case "author":
+        queryUrl = "/api/authors/" + id;
+        break;
+      default:
+        return;
     }
-    $.get(queryUrl, function(data) {
+    $.get(queryUrl, function (data) {
       if (data) {
         console.log(data.AuthorId || data.id);
         // If this post exists, prefill our cms forms with its data
@@ -100,19 +100,26 @@ $(document).ready(function() {
   // Function to either render a list of authors, or if there are none, direct the user to the page
   // to create an author first
   function renderAuthorList(data) {
+    console.log("author: ", data)
     if (!data.length) {
       window.location.href = "/authors";
     }
-    $(".hidden").removeClass("hidden");
-    var rowsToAdd = [];
     for (var i = 0; i < data.length; i++) {
-      rowsToAdd.push(createAuthorRow(data[i]));
+      $("#author").append(`<option value=${data[i].id}>${data[i].name}</option>`)
+
     }
-    authorSelect.empty();
-    console.log(rowsToAdd);
-    console.log(authorSelect);
-    authorSelect.append(rowsToAdd);
-    authorSelect.val(authorId);
+    $('select').formSelect();
+
+    // $(".hidden").removeClass("hidden");
+    // var rowsToAdd = [];
+    // for (var i = 0; i < data.length; i++) {
+    //   rowsToAdd.push(createAuthorRow(data[i]));
+    // }
+    // authorSelect.empty();
+    // console.log(rowsToAdd);
+    // console.log(authorSelect);
+    // authorSelect.append(rowsToAdd);
+    // authorSelect.val(authorId);
   }
 
   // Creates the author options in the dropdown
@@ -130,7 +137,7 @@ $(document).ready(function() {
       url: "/api/posts",
       data: post
     })
-      .then(function() {
+      .then(function () {
         window.location.href = "/blog";
       });
   }

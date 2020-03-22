@@ -4,23 +4,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>CMS - Express</title>
-	<!-- Latest compiled and minified CSS & JS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+
+	<!--Materilize  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
 	<link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 </head>
 
 <body>
 	<div class="container hidden">
 		<div class="row top-30">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/blog">Go to Blog</a>
-      </div>
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/authors">Manage Authors</a>
-      </div>
-    </div>
+			<div class="col-md-2 col-sm-2">
+				<a class="btn btn-light" href="/blog">Go to Blog</a>
+			</div>
+			<div class="col-md-2 col-sm-2">
+				<a class="btn btn-light" href="/authors">Manage Authors</a>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-6 offset-md-3">
 				<form id="cms">
@@ -33,20 +36,24 @@
 						<div class="form-group">
 							<label for="author">Select Author:</label>
 							<select class="custom-select" id="author">
-  						</select>
+								<option value="" disabled selected>Choose author option</option>
+							</select>
 						</div>
 						<!-- Added category field -->
 						<div class="form-group">
 							<label for="category">Select Category:</label>
 							<select class="custom-select" id="category">
+								<option value="" disabled selected>Choose categorie option</option>
 								<option value="cooking">Cooking</option>
 								<option value="DIY">DIY</option>
 								<option value="Travel">Travel</option>
 								<option value="Soccer">Soccer</option>
 								<option value="Inspirational Quotes">Inspirational Quotes</option>
 								<option value="Music">Music</option>
-  						</select>
+							</select>
 						</div>
+				
+						<br />
 						<br />
 						<button type="submit" class="btn btn-success submit">Submit</button>
 					</div>
@@ -55,8 +62,16 @@
 		</div>
 	</div>
 	<!-- Custom Script -->
-	<script src="js/cms.js" type="text/javascript"></script>
 
+
+
+	<script src="js/cms.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function () {
+			$('select').formSelect();
+		});
+
+	</script>
 </body>
 
 </html>
