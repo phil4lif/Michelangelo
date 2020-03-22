@@ -1,9 +1,25 @@
+.brand-logo{
+  padding-left: 50px !important;
+}
+
+
+
+
 body  {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: aqua;
+  background-image: url("../images/seaimg.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 main {
   flex: 1 0 auto;
 }
+
+nav, .page-footer{
+  opacity: 0.5;
+}
+
