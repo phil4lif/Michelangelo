@@ -1,11 +1,8 @@
-.brand-logo{
+.brand-logo {
   padding-left: 50px !important;
 }
 
-
-
-
-body  {
+body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -19,7 +16,28 @@ main {
   flex: 1 0 auto;
 }
 
-nav, .page-footer{
+nav,
+.page-footer {
   opacity: 0.5;
 }
 
+.color {
+  background: linear-gradient(92deg, #95d7e3, #eb76ff);
+  background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+  background-size: 600vw 600vw;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnimate 5s linear infinite alternate;
+}
+
+@keyframes textAnimate {
+  from {
+    filter: hue-rotate(0deg);
+    background-position-x: 0%;
+  }
+  to {
+    filter: hue-rotate(360deg);
+    background-position-x: 600vw;
+  }
+}
