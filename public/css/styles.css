@@ -6,6 +6,11 @@
   margin-right: 65px;
 }
 
+nav{
+  background-color: rgba(0, 0, 0, 0)!important;
+  box-shadow: none;
+}
+
 .brand-logo{
   padding-left: 50px !important;
 }
