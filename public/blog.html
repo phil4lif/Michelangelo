@@ -20,7 +20,7 @@
 
   <!-- Nav Bar -->
   <nav>
-    <div class="nav-wrapper blue  lighten-2">
+    <div class="nav-wrapper z-depth-0">
       <a class="brand-logo color">Casper</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/authors">Manage Authors</a></li>
@@ -34,7 +34,7 @@
 
 
   <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content">
+  <ul id="dropdown1" class="dropdown-content transparent">
     <li id="diy"><a href="#!">DIY</a></li>
     <li id="cooking"><a href="#!">Cooking</a></li>
     <li id="travel"><a href="#!">Travel</a></li>
@@ -63,8 +63,9 @@
 
             </tbody>
           </table>
-          <h3 class="white-text animated fadeInDown">Insomnia sharpens your math skills because you spend all night calculating how much sleep you’ll get if
-            you’re able to ‘fall asleep right now.</h3>
+          <h2 class="white-text animated fadeInDown" id="quote"></h2>
+          <h5 class="white-text animated fadeInDown" id="author"></h5>
+
             
         </div>
       </div>
@@ -72,7 +73,7 @@
     </div>
   </main>
 
-  <footer class="page-footer center-align blue lighten-2">
+  <footer class="page-footer transparent center-align">
     <div class="container">
       <div class="row">
         <div>
@@ -86,6 +87,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/api.js"></script> 
   <script src="./js/author.js"></script>
   <script src="./js/index.js"></script>
 

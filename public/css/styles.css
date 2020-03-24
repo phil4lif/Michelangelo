@@ -1,4 +1,17 @@
-.brand-logo {
+.dropdown-content{
+  top: 65px!important;
+}
+
+.dropdown-trigger{
+  margin-right: 65px;
+}
+
+nav{
+  background-color: rgba(0, 0, 0, 0)!important;
+  box-shadow: none;
+}
+
+.brand-logo{
   padding-left: 50px !important;
 }
 
@@ -16,16 +29,10 @@ main {
   flex: 1 0 auto;
 }
 
-nav,
-.page-footer {
-  opacity: 0.5;
-}
-
 .color {
   background: linear-gradient(92deg, #95d7e3, #eb76ff);
   background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
   background-size: 600vw 600vw;
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textAnimate 5s linear infinite alternate;
