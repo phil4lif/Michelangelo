@@ -34,12 +34,14 @@
 
 
   <!-- Dropdown Structure -->
-  <ul id="dropdown1" class="dropdown-content transparent">
-    <li id="diy"><a href="#!">DIY</a></li>
-    <li id="cooking"><a href="#!">Cooking</a></li>
-    <li id="travel"><a href="#!">Travel</a></li>
-    <li id="music"><a href="#!">Music</a></li>
-    <li id="quotes"><a href="#!">Quotes</a></li>
+
+  <ul id="dropdown1" class="dropdown-content">
+    <li class="category" data-name="DIY" id="diy"><a href="#">DIY</a></li>
+    <li class="category" data-name="cooking" id="cooking"><a href="#">Cooking</a></li>
+    <li class="category" data-name="travel" id="travel"><a href="#">Travel</a></li>
+    <li class="category" data-name="music" id="music"><a href="#">Music</a></li>
+    <li class="category" data-name="quotes" id="quotes"><a href="#">Quotes</a></li>
+
   </ul>
 
   <!-- Content -->
@@ -59,7 +61,7 @@
               </tr>
             </thead>
 
-            <tbody>
+            <tbody id="resultsbody">
 
             </tbody>
           </table>
@@ -90,6 +92,7 @@
   <script src="./js/api.js"></script> 
   <script src="./js/author.js"></script>
   <script src="./js/index.js"></script>
+  <script src="./js/blog.js"></script>
 
 </body>
 
