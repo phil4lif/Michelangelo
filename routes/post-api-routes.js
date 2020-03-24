@@ -28,11 +28,14 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+  //new api route for get posts by category
   app.get("/api/posts/:category", function(req, res) {
     db.Post.findAll({
       where: {
         category : req.params.category
-      }}).then(function(dbPost) {
+      },
+        include: [db.Author]
+      }).then(function(dbPost) {
         res.json(dbPost);
       });
     });
