@@ -20,7 +20,7 @@
 
   <!-- Nav Bar -->
   <nav>
-    <div class="nav-wrapper blue  lighten-2">
+    <div class="nav-wrapper z-depth-0">
       <a class="brand-logo color">Casper</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/authors">Manage Authors</a></li>
@@ -34,12 +34,14 @@
 
 
   <!-- Dropdown Structure -->
+
   <ul id="dropdown1" class="dropdown-content">
     <li class="category" data-name="DIY" id="diy"><a href="#">DIY</a></li>
     <li class="category" data-name="cooking" id="cooking"><a href="#">Cooking</a></li>
     <li class="category" data-name="travel" id="travel"><a href="#">Travel</a></li>
     <li class="category" data-name="music" id="music"><a href="#">Music</a></li>
     <li class="category" data-name="quotes" id="quotes"><a href="#">Quotes</a></li>
+
   </ul>
 
   <!-- Content -->
@@ -63,8 +65,9 @@
 
             </tbody>
           </table>
-          <h3 class="white-text animated fadeInDown">Insomnia sharpens your math skills because you spend all night calculating how much sleep you’ll get if
-            you’re able to ‘fall asleep right now.</h3>
+          <h2 class="white-text animated fadeInDown" id="quote"></h2>
+          <h5 class="white-text animated fadeInDown" id="author"></h5>
+
             
         </div>
       </div>
@@ -72,7 +75,7 @@
     </div>
   </main>
 
-  <footer class="page-footer center-align blue lighten-2">
+  <footer class="page-footer transparent center-align">
     <div class="container">
       <div class="row">
         <div>
@@ -86,6 +89,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/api.js"></script> 
   <script src="./js/author.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/blog.js"></script>
