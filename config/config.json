@@ -15,12 +15,8 @@
     "port": 3306,
     "dialect": "mysql"
   },
-  "production": {
-    "username": "root",
-    "password": "root",
-    "database": "michelangelo_DB",
-    "host": "localhost",
-    "port": 3306,
-    "dialect": "mysql"
-  }
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
+    }
 }
