@@ -29,6 +29,10 @@ main {
   flex: 1 0 auto;
 }
 
+.hide{
+  color: white!important;
+}
+
 .color {
   background: linear-gradient(92deg, #95d7e3, #eb76ff);
   background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
