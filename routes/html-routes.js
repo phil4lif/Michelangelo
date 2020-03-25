@@ -14,7 +14,7 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // cms route loads cms.html
@@ -24,7 +24,7 @@ module.exports = function(app) {
 
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
   // authors route loads author-manager.html
