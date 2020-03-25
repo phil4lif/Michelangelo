@@ -1,7 +1,6 @@
 {
   "name": "michelangelo",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +12,18 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "moment": "^2.24.0",
     "mysql2": "^1.6.4",
-    "sequelize": "^4.41.2"
-  }
+    "sequelize": "^4.44.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phil4lif/Michelangelo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phil4lif/Michelangelo/issues"
+  },
+  "homepage": "https://github.com/phil4lif/Michelangelo#readme",
+  "description": ""
 }

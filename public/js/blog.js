@@ -1,6 +1,37 @@
-$(document).ready(function() {
+$(document).ready(function () {
   /* global moment */
+  var category;
+  $(".category").on("click", function () {
+    category = $(this).attr("data-name");
+    console.log(category);
+    var queryURL = "api/posts/" + category
+    console.log(queryURL);
+    $.ajax({
+      method: "GET",
+      url: queryURL
+    })
+      .then(function (response) {
+        console.log(response)
+        resultsArr = response;
+        resultsArr.map(function (value, key) {
+          var newResult = $("<tr>");
+          newResult.attr("id", "result-" + key);
+          var newTitle = $("<td>").html("<h5>" + value.title + "</h5>");
+          var newAuthor = $("<td>").html("<h5>" + value.Author.name + "</h5>");
+          var newCategory = $("<td>").html("<h5>" + value.category + "</h5>");
+          var newCreatedAt = $("<td>").html("<h5>" + value.createdAt + "</h5>");
+          var newBody = $("<td>").html("<p>" + value.body + "</p>");
 
+          newResult.append(newTitle).append(newAuthor).append(newCategory).append(newCreatedAt).append(newBody);
+          $("#resultsbody").prepend(newResult);
+        })
+      })
+
+
+  })
+  // function getPostsByCategory(category) {
+
+  // }
   // blogContainer holds all of our posts
   var blogContainer = $(".blog-container");
   var postCategorySelect = $("#category");
@@ -30,7 +61,7 @@ $(document).ready(function() {
     if (authorId) {
       authorId = "/?author_id=" + authorId;
     }
-    $.get("/api/posts" + authorId, function(data) {
+    $.get("/api/posts" + authorId, function (data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
@@ -48,7 +79,7 @@ $(document).ready(function() {
       method: "DELETE",
       url: "/api/posts/" + id
     })
-      .then(function() {
+      .then(function () {
         getPosts(postCategorySelect.val());
       });
   }
@@ -62,7 +93,6 @@ $(document).ready(function() {
     }
     blogContainer.append(postsToAdd);
   }
-
   // This function constructs a post's HTML
   function createNewRow(post) {
     var formattedDate = new Date(post.createdAt);
@@ -85,7 +115,7 @@ $(document).ready(function() {
       float: "right",
       color: "blue",
       "margin-top":
-      "-10px"
+        "-10px"
     });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
@@ -134,7 +164,7 @@ $(document).ready(function() {
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
     messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
-    "'>here</a> in order to get started.");
+      "'>here</a> in order to get started.");
     blogContainer.append(messageH2);
   }
 

@@ -1,47 +1,50 @@
-button.submit {
-  float: right;
+.dropdown-content{
+  top: 65px!important;
 }
 
-form#cms {
-  margin-top: 50px;
+.dropdown-trigger{
+  margin-right: 65px;
 }
 
-#cms textarea {
-  resize: none;
+nav{
+  background-color: rgba(0, 0, 0, 0)!important;
+  box-shadow: none;
 }
 
-.card-header button.delete,
-button.edit {
-  float: right;
-  margin: 5px;
+.brand-logo{
+  padding-left: 50px !important;
 }
 
-.author-container {
-  margin-top: 50px;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: aqua;
+  background-image: url("../images/seaimg.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
-.author-list {
-  margin-top: 25px;
+main {
+  flex: 1 0 auto;
 }
 
-.blog-container {
-  margin-top: 30px;
+.color {
+  background: linear-gradient(92deg, #95d7e3, #eb76ff);
+  background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+  background-size: 600vw 600vw;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textAnimate 5s linear infinite alternate;
 }
 
-.blog {
-  margin-top: 30px;
-}
-
-.hidden {
-  display: none;
-}
-
-#author-name {
-  width: 100%;
-  height: 35px;
-  margin-top: 5px;
-}
-
-.top-30 {
-  margin-top: 30px;
+@keyframes textAnimate {
+  from {
+    filter: hue-rotate(0deg);
+    background-position-x: 0%;
+  }
+  to {
+    filter: hue-rotate(360deg);
+    background-position-x: 600vw;
+  }
 }

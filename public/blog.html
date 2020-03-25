@@ -3,32 +3,96 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Blog - Express</title>
-  <!-- Latest compiled and minified CSS & JS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <title>Casper</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 </head>
 
 <body>
-  <div class="container blog">
-    <div class="row">
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/cms">New Post</a>
+
+  <!-- Nav Bar -->
+  <nav>
+    <div class="nav-wrapper z-depth-0">
+      <a class="brand-logo color">Casper</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/authors">Manage Authors</a></li>
+        <li><a href="./cms.html">New Post</a></li>
+        <!-- Dropdown Trigger -->
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i
+              class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Dropdown Structure -->
+
+  <ul id="dropdown1" class="dropdown-content">
+    <li class="category" data-name="DIY" id="diy"><a href="#">DIY</a></li>
+    <li class="category" data-name="cooking" id="cooking"><a href="#">Cooking</a></li>
+    <li class="category" data-name="travel" id="travel"><a href="#">Travel</a></li>
+    <li class="category" data-name="music" id="music"><a href="#">Music</a></li>
+    <li class="category" data-name="quotes" id="quotes"><a href="#">Quotes</a></li>
+
+  </ul>
+
+  <!-- Content -->
+
+  <main class="valign-wrapper">
+    <div class="container center-align">
+      <div class="row">
+        <div class="col s12">
+          <table>
+            <thead class="hide">
+              <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Preview</th>
+                <th>Posted</th>  
+              </tr>
+            </thead>
+
+            <tbody id="resultsbody">
+
+            </tbody>
+          </table>
+          <h2 class="white-text animated fadeInDown" id="quote"></h2>
+          <h5 class="white-text animated fadeInDown" id="author"></h5>
+
+            
+        </div>
       </div>
-      <div class="col-md-2 col-sm-2">
-        <a class="btn btn-light" href="/authors">Manage Authors</a>
+
+    </div>
+  </main>
+
+  <footer class="page-footer transparent center-align">
+    <div class="container">
+      <div class="row">
+        <div>
+          <h5 class="white-text">Casper and Company</h5>
+          <p>Practicing social distancing since © 2020 </p>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12 blog-container">
-      </div>
-    </div>
-  </div>
-  <!-- Custom Script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
-  <script src="js/blog.js" type="text/javascript"></script>
+  </footer>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/api.js"></script> 
+  <script src="./js/author.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/blog.js"></script>
 
 </body>
 
