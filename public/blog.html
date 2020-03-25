@@ -24,6 +24,7 @@
       <a class="brand-logo color">Casper</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/blog.html">Home</a></li>
+        <li><a href="/author-manager.html">Sign Up</a></li>
         <li><a href="./cms.html">New Post</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i
@@ -50,8 +51,8 @@
     <div class="container center-align">
       <div class="row">
         <div class="col s12">
-          <table>
-            <thead class="hide">
+          <table class="hide" id="show">
+            <thead>
               <tr>
                 <th>Name</th>
                 <th>Title</th>
@@ -61,7 +62,7 @@
               </tr>
             </thead>
 
-            <tbody id="resultsbody">
+            <tbody class="card white-text transparent" id="resultsbody">
 
             </tbody>
           </table>
