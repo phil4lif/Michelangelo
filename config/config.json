@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Zeph#317",
+    "password": "root",
     "database": "michelangelo_DB",
     "host": "localhost",
     "port": 3306,
