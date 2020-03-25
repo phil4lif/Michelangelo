@@ -1,9 +1,22 @@
 $(document).ready(function () {
+
+  var userID ;
+  function loadUserData() {
+    $.ajax({
+      method: "GET",
+      url: "/api/user_data"
+    }).then(function(response){
+      console.log(response);
+      $("#author").html(response.name)
+      userID = response.id
+    })
+  }
+  loadUserData();
   // Getting jQuery references to the post body, title, form, and author select
   var bodyInput = $("#body");
   var titleInput = $("#title");
   var cmsForm = $("#cms");
-  var authorSelect = $("#author");
+  // var authorSelect = $("#author");
   var categorySelect = $("#category");
 
   // Adding an event listener for when the form is submitted
@@ -33,7 +46,7 @@ $(document).ready(function () {
   function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body, title, or author
-    if (!titleInput.val().trim() || !bodyInput.val().trim() || !authorSelect.val()) {
+    if (!titleInput.val().trim() || !bodyInput.val().trim()) {
       return;
     }
     // Constructing a newPost object to hand to the database
@@ -44,7 +57,7 @@ $(document).ready(function () {
       body: bodyInput
         .val()
         .trim(),
-      AuthorId: authorSelect.val(),
+      UserId: userID,
       category: categorySelect.val()
     };
 

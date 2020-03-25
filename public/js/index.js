@@ -18,7 +18,7 @@ $(document).ready(function () {
           var newResult = $("<tr>");
           newResult.attr("id", "result-" + key);
           var newTitle = $("<td>").html("<h5>" + value.title + "</h5>");
-          var newAuthor = $("<td>").html("<h5>" + value.Author.name + "</h5>");
+          var newAuthor = $("<td>").html("<h5>" + value.User.name + "</h5>");
           var newCategory = $("<td>").html("<h5>" + value.category + "</h5>");
           var newCreatedAt = $("<td>").html("<h5>" + value.createdAt + "</h5>");
           var newBody = $("<td>").html("<p>" + value.body + "</p>");
@@ -27,8 +27,6 @@ $(document).ready(function () {
           $("#resultsbody").prepend(newResult);
         })
       })
-
-
   })
   // function getPostsByCategory(category) {
 
