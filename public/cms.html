@@ -14,9 +14,11 @@
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<main>
 
-	<body>
+<body>
+	<main>
+
+
 		<div class="container hidden">
 			<!-- Nav Bar -->
 			<nav>
@@ -60,10 +62,11 @@
 								</p>
 							</div>
 							<!-- Added category field -->
+							
 							<div class="form-group">
 								<label for="category">Category:</label>
 								<select class="custom-select" id="category">
-									<option value="" disabled selected>Choose categorie option</option>
+									<option value="" disabled selected>Choose Category Option</option>
 									<option value="cooking">Cooking</option>
 									<option value="DIY">DIY</option>
 									<option value="Travel">Travel</option>
@@ -81,32 +84,34 @@
 				</div>
 			</div>
 		</div>
-	</body>
-</main>
-<footer class="page-footer transparent center-align">
-	<div class="container">
-		<div class="row">
-			<div>
-				<h5 class="white-text">Casper and Company</h5>
-				<p>Practicing social distancing since © 2020 </p>
+
+	</main>
+	<footer class="page-footer transparent center-align">
+		<div class="container">
+			<div class="row">
+				<div>
+					<h5 class="white-text">Casper and Company</h5>
+					<p>Practicing social distancing since © 2020 </p>
+				</div>
 			</div>
 		</div>
-	</div>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/api.js"></script> 
-  <script src="./js/author.js"></script>
-  <script src="./js/index.js"></script>
-  <script src="./js/cms.js"></script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="./js/api.js"></script>
+		<script src="./js/author.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/cms.js"></script>
 
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $(".dropdown-trigger").dropdown();
-  });
-  </script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".dropdown-trigger").dropdown();
+				$('select').formSelect();
+			});
+		</script>
 
-</footer>
+	</footer>
 
+</body>
 
 </html>
