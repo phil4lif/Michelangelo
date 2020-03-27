@@ -51,21 +51,33 @@ $(document).ready(function () {
     })
       .then(function (response) {
         $("#resultsbody").empty();
-
+        $("#show").removeClass("hide");
         console.log(response)
-        resultsArr = response;
-        resultsArr.map(function (value, key) {
-          var newResult = $("<tr>");
-          newResult.attr("id", "result-" + key);
-          var newTitle = $("<td>").html("<h5>" + value.title + "</h5>");
-          var newAuthor = $("<td>").html("<h5>" + value.User.name + "</h5>");
-          var newCategory = $("<td>").html("<h5>" + value.category + "</h5>");
-          var newCreatedAt = $("<td>").html("<h5>" + value.createdAt + "</h5>");
-          var newBody = $("<td>").html("<p>" + value.body + "</p>");
-
-          newResult.append(newTitle).append(newAuthor).append(newCategory).append(newCreatedAt).append(newBody);
-          $("#resultsbody").prepend(newResult);
-        });
+          resultsArr = response;
+          resultsArr.map(function (value, key) {
+  
+            var newResult = $("<div>").addClass("container center-align").html(
+              `<div class="col s12">
+                  <div class="card">
+                    <div class="card-image">
+                      <img height=250 width=250 style="background-color: rgba(100,200,200,1);"src="images/sample-1.jpg">
+                      <span class="card-title"> ${ value.title } </span>
+                    </div>
+                    <div class="card-content">
+                      <p> ${ value.body } </p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#"> ${ value.User.name } </a>
+                      <a href="#"> ${ value.category } </a>
+                      <a href="#"> ${ value.createdAt } </a>
+                    </div>
+                  </div>
+              </div>`
+            );
+            
+            $("#resultsbody").prepend(newResult);
+  
+          });
       });
   });
 });
