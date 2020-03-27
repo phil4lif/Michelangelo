@@ -1,3 +1,5 @@
+/* Navbar */
+
 .dropdown-content{
   top: 65px!important;
 }
@@ -14,6 +16,9 @@ nav{
 .brand-logo{
   padding-left: 50px !important;
 }
+
+/* End navbar */
+
 
 body {
   display: flex;
@@ -42,6 +47,8 @@ main {
   animation: textAnimate 5s linear infinite alternate;
 }
 
+/* Sign up page */
+
 .signupimage{
   background-image: url("/public/images/signupimage2.jpg");
   background-position: center;
@@ -63,6 +70,28 @@ main {
   font-size: 24px;
   text-transform: uppercase;
 }
+
+/* End Sign up */
+
+
+/* Login */
+
+.loginimage{
+  background-image: url("/public/images/login.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  color: rgb(230, 3, 79);
+
+}
+
+.here-color{
+  color: rgb(230, 3, 79);
+}
+
+/* End Login */
 
 @keyframes textAnimate {
   from {
