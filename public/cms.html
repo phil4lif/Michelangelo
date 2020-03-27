@@ -31,6 +31,48 @@
 
 
 
+		  <!-- Nav Bar -->
+		  <nav>
+			<div class="nav-wrapper z-depth-0">
+			  <a class="brand-logo color">Casper</a>
+			  <ul class="right hide-on-med-and-down">
+				<li><a href="/">Home</a></li>
+				<li><a href="/cms">New Post</a></li>
+				<!-- Dropdown Trigger -->
+				<li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i
+					  class="material-icons right">arrow_drop_down</i></a></li>
+			  </ul>
+			</div>
+		  </nav>
+		
+		
+		  <!-- Dropdown Structure -->
+		
+		  <ul id="dropdown1" class="dropdown-content">
+			<li class="category" data-name="DIY" id="diy"><a href="#">DIY</a></li>
+			<li class="category" data-name="cooking" id="cooking"><a href="#">Cooking</a></li>
+			<li class="category" data-name="travel" id="travel"><a href="#">Travel</a></li>
+			<li class="category" data-name="music" id="music"><a href="#">Music</a></li>
+			<li class="category" data-name="quotes" id="quotes"><a href="#">Quotes</a></li>
+		
+		  </ul>
+		
+		<div class="row white-text">
+			<div class="col-md-6 offset-md-3">
+				<form id="cms">
+					<div class="form-group">
+						<label for="title">Title:</label>
+						<input placeholder="Post Title" type="text" class="form-control" id="title">
+						<br />
+						<label for="body">Text:</label>
+						<textarea placeholder="Text" class="form-control" rows="10" id="body"></textarea>
+						<div class="form-group">
+							<label for="author">Author:</label>
+							<p class="custom-select" id="author">
+								
+							</p>
+						</div>
+						<!-- Added category field -->
 						<div class="form-group">
 							<label for="title">Title:</label>
 							<input placeholder="Post Title" type="text" class="form-control" id="title">
@@ -79,6 +121,17 @@
 </footer>
 
 
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/api.js"></script> 
+  <script src="./js/author.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/cms.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('select').formSelect();
+		});
 
 </script>
 </body>

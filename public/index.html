@@ -23,9 +23,11 @@
     <div class="nav-wrapper z-depth-0">
       <a class="brand-logo color">Casper</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/blog.html">Home</a></li>
-        <li><a href="/author-manager.html">Sign Up</a></li>
-        <li><a href="./cms.html">New Post</a></li>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/signup">Sign Up</a></li>
+        <li><a href="/cms">New Post</a></li>
+
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categories<i
               class="material-icons right">arrow_drop_down</i></a></li>
@@ -95,7 +97,12 @@
   <script src="./js/api.js"></script> 
   <script src="./js/author.js"></script>
   <script src="./js/index.js"></script>
-  <script src="./js/blog.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(".dropdown-trigger").dropdown();
+  });
+  </script>
 
 </body>
 
