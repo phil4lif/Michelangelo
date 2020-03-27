@@ -28,6 +28,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+  
   //new api route for get posts by category
   app.get("/api/posts/:category", function(req, res) {
     db.Post.findAll({
