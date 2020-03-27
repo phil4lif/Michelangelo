@@ -1,10 +1,36 @@
 $(document).ready(function () {
   /* global moment */
+
+  function getAllPosts() {
+    $.ajax({
+      method: "GET",
+      url: "api/posts/"
+    }).then(function (response) {
+      $("#show").removeClass("hide");
+      console.log(response)
+        resultsArr = response;
+        resultsArr.map(function (value, key) {
+          var newResult = $("<tr>");
+          newResult.attr("id", "result-" + key);
+          var newTitle = $("<td>").html("<h5>" + value.title + "</h5>");
+          var newAuthor = $("<td>").html("<h5>" + value.User.name + "</h5>");
+          var newCategory = $("<td>").html("<h5>" + value.category + "</h5>");
+          var newCreatedAt = $("<td>").html("<h5>" + value.createdAt + "</h5>");
+          var newBody = $("<td>").html("<p>" + value.body + "</p>");
+
+          newResult.append(newTitle).append(newAuthor).append(newCategory).append(newCreatedAt).append(newBody);
+          $("#resultsbody").prepend(newResult);
+        });
+    });
+  };
+
+  getAllPosts();
+
   var category;
   $(".category").on("click", function () {
     category = $(this).attr("data-name");
     console.log(category);
-    $("#show").removeClass("hide")
+    $("#show").removeClass("hide");
     var queryURL = "api/posts/" + category
     console.log(queryURL);
     $.ajax({
@@ -12,6 +38,8 @@ $(document).ready(function () {
       url: queryURL
     })
       .then(function (response) {
+        $("#resultsbody").empty();
+
         console.log(response)
         resultsArr = response;
         resultsArr.map(function (value, key) {
@@ -25,9 +53,12 @@ $(document).ready(function () {
 
           newResult.append(newTitle).append(newAuthor).append(newCategory).append(newCreatedAt).append(newBody);
           $("#resultsbody").prepend(newResult);
-        })
-      })
-  })
+        });
+      });
+  });
+});
+
+  /*
   // function getPostsByCategory(category) {
 
   // // }
@@ -165,6 +196,4 @@ $(document).ready(function () {
   //   messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
   //     "'>here</a> in order to get started.");
   //   blogContainer.append(messageH2);
-  // }
-
-});
+  */
