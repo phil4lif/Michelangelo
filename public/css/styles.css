@@ -42,6 +42,28 @@ main {
   animation: textAnimate 5s linear infinite alternate;
 }
 
+.signupimage{
+  background-image: url("/public/images/signupimage2.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  color: rgb(230, 3, 79);
+
+}
+
+.sign-up-btn{
+  background-color: rgb(230, 3, 79);
+}
+
+.colorful-link{
+  color: rgb(230, 3, 79);
+  text-emphasis: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
 @keyframes textAnimate {
   from {
     filter: hue-rotate(0deg);
