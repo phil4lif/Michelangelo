@@ -7,7 +7,7 @@ $(document).ready(function () {
       url: "/api/user_data"
     }).then(function(response){
       console.log(response);
-      $("#author").html(response.name)
+      $("#username").html(response.name)
       userID = response.id
     })
   }
