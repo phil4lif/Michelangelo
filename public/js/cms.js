@@ -49,6 +49,7 @@ $(document).ready(function () {
     if (!titleInput.val().trim() || !bodyInput.val().trim()) {
       return;
     }
+    //writing some comments so that i can deploy the new database
     // Constructing a newPost object to hand to the database
     var newPost = {
       title: titleInput
