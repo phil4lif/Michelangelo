@@ -11,12 +11,12 @@ $(document).ready(function () {
         resultsArr = response;
         resultsArr.map(function (value, key) {
 
-          var newResult = $("<div>").addClass("container center-align").html(
+          var newResult = $("<div>").addClass("container center-align user-post-card").html(
             `<div class="col s12">
                 <div class="card">
                   <div class="card-image">
-                    <img height=250 width=250 style="background-color: rgba(100,200,200,1);"src="images/sample-1.jpg">
-                    <span class="card-title"> ${ value.title } </span>
+                    <img style="background-color: rgba(100,200,200,1);"src="https://picsum.photos/400/200">
+                    <span class="card-title user-post-title"> ${ value.title } </span>
                   </div>
                   <div class="card-content">
                     <p> ${ value.body } </p>
