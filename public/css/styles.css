@@ -93,6 +93,16 @@ main {
 
 /* End Login */
 
+/* User Post */
+
+.user-post-title {
+  background: rgba(0,0,0,.4);
+  width: 100%;
+}
+
+/* End User Post */
+
+
 @keyframes textAnimate {
   from {
     filter: hue-rotate(0deg);
